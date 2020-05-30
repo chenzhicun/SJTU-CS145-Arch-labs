@@ -26,7 +26,25 @@ module Registers(
     input [4:0] writeReg,
     input [31:0] writeData,
     input regWrite,
-    output [31:0] readData1,
-    output [31:0] readData2
+    output reg [31:0] readData1,
+    output reg [31:0] readData2,
+    input Clk
     );
+    
+    reg [31:0] regFile[31:0];
+    
+    always @ (readReg1 or readReg2 or writeReg)
+    begin
+        // For the MIPS ISA, we always have reg file #0's value equals to 0;
+        regFile[0]=0;
+        readData1=regFile[readReg1];
+        readData2=regFile[readReg2];
+    end
+    
+    always @ (negedge Clk)
+    begin
+        if(regWrite)
+            regFile[writeReg]=writeData;
+    end
+    
 endmodule
