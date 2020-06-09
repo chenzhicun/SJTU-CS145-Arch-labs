@@ -31,12 +31,13 @@ module Registers(
     input Clk,
     input reset
     );
-    
+
     reg [31:0] regFile[31:0];
     //declaration must be global
     reg [5:0] cnt;//we need to set bit width to 6,because if it is only 5(range:0~31), it will overflow when adding to 32
     
     always @ (readReg1 or readReg2 or writeReg)
+    // actually here exists a bug that if two inst don't change the port, it will not update the read value.
     begin
         // For the MIPS ISA, we always have reg file #0's value equals to 0;
         regFile[0]=0;

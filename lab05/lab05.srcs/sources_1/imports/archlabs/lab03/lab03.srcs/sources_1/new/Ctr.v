@@ -29,7 +29,7 @@ module Ctr(
     output reg memRead,
     output reg memWrite,
     output reg branch,
-    output reg [1:0] aluOp,
+    output reg [2:0] aluOp,
     output reg jump
     );
     
@@ -45,7 +45,7 @@ module Ctr(
             memRead=0;
             memWrite=0;
             branch=0;
-            aluOp=2'b10;
+            aluOp=3'b010;
             jump=0;
         end
         6'b100011://I-type:lw
@@ -57,7 +57,7 @@ module Ctr(
             memRead=1;
             memWrite=0;
             branch=0;
-            aluOp=2'b00;
+            aluOp=3'b000;
             jump=0;
         end
         6'b101011://I-type:sw
@@ -69,7 +69,7 @@ module Ctr(
             memRead=0;
             memWrite=1;
             branch=0;
-            aluOp=2'b00; 
+            aluOp=3'b000; 
             jump=0;           
         end
         6'b000100://I-type:beq
@@ -81,7 +81,7 @@ module Ctr(
             memRead=0;
             memWrite=0;
             branch=1;
-            aluOp=2'b01;
+            aluOp=3'b001;
             jump=0;
         end
         6'b000010://J-type:j
@@ -93,7 +93,7 @@ module Ctr(
             memRead=0;
             memWrite=0;
             branch=0;
-            aluOp=2'b00;
+            aluOp=3'b000;
             jump=1;
         end
         6'b001000://I-type:addi
@@ -105,7 +105,7 @@ module Ctr(
             memRead=0;
             memWrite=0;
             branch=0;
-            aluOp=2'b10;
+            aluOp=3'b100;
             jump=0;
         end
         6'b001100://I-type:andi
@@ -117,7 +117,7 @@ module Ctr(
             memRead=0;
             memWrite=0;
             branch=0;
-            aluOp=2'b10;
+            aluOp=3'b111;
             jump=0;
         end
         6'b001101://I-type:ori
@@ -129,7 +129,7 @@ module Ctr(
             memRead=0;
             memWrite=0;
             branch=0;
-            aluOp=2'b10;
+            aluOp=3'b110;
             jump=0;
         end
         6'b000011://J-type:jal
@@ -141,7 +141,7 @@ module Ctr(
             memRead=0;
             memWrite=0;
             branch=0;
-            aluOp=2'b00;
+            aluOp=3'b000;
             jump=1;
         end
         
@@ -154,7 +154,7 @@ module Ctr(
             memRead=0;
             memWrite=0;
             branch=0;
-            aluOp=2'b00;
+            aluOp=3'b000;
             jump=0;
         end
         endcase    
