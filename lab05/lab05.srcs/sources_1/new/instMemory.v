@@ -22,15 +22,15 @@
 
 module instMemory(
     input [31:0] readAddress,
-    output reg [31:0] inst
+    output [31:0] inst
     );
 
-    reg [31:0] memFile[0:63];
+    reg [7:0] memFile[0:127];
 
     initial begin
-        $readmemb("./instruction.txt",memFile);
+        $readmemb("D:/Project/archlabs/lab05/instruction.txt",memFile);
     end
 
-    assign inst=memFile[readAddress];
+    assign inst={memFile[readAddress+3],memFile[readAddress+2],memFile[readAddress+1],memFile[readAddress]};
 
 endmodule

@@ -30,6 +30,10 @@ module dataMemory(
     );
 
     reg [31:0] memFile[0:63];
+    
+    initial begin
+        $readmemh("D:/Project/archlabs/lab05/data.txt",memFile);
+    end
 
     always @ (address)
     begin

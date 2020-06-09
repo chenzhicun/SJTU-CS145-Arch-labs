@@ -38,7 +38,7 @@ module Top(
     wire [31:0] INST;
 
     //main control
-    Ctr mainCtr(.opCode(INST[31:26]),.regDst(REG_DST),.aluSrc(ALU_SRC),.memToReg(MEM_TO_REG),.regWrite(REG_WRITE),.memRead(MEM_READ),.memWrite(MEM_WRITE),.branch(BRANCH),.aluOp(ALU_OP));
+    Ctr mainCtr(.opCode(INST[31:26]),.regDst(REG_DST),.aluSrc(ALU_SRC),.memToReg(MEM_TO_REG),.regWrite(REG_WRITE),.memRead(MEM_READ),.memWrite(MEM_WRITE),.branch(BRANCH),.aluOp(ALU_OP),.jump(JUMP));
     //instruction memory
     instMemory instMem(.readAddress(PC),.inst(INST));
 
@@ -65,11 +65,13 @@ module Top(
 
     //compute next PC
     wire [31:0] PC_PLUS_4,BRANCH_ADDR,JUMP_ADDR,BRANCH_MUX_RESULT,NEXT_PC;
+    wire BRANCH_FINAL;
     //Actually the next line can be implemented as an independent component as adder.
+    assign BRANCH_FINAL=ZERO & BRANCH;
     assign PC_PLUS_4=PC+4;
     assign BRANCH_ADDR=PC_PLUS_4+(IMMIDIATE_EXT<<2);
     assign JUMP_ADDR={PC_PLUS_4[31:28],INST[25:0]<<2};
-    Mux32 branchMux(.sel(BRANCH),.in1(PC_PLUS_4),.in2(BRANCH_ADDR),.out(BRANCH_MUX_RESULT));
+    Mux32 branchMux(.sel(BRANCH_FINAL),.in1(PC_PLUS_4),.in2(BRANCH_ADDR),.out(BRANCH_MUX_RESULT));
     Mux32 jumpMux(.sel(JUMP),.in1(BRANCH_MUX_RESULT),.in2(JUMP_ADDR),.out(NEXT_PC));
 
     //update PC

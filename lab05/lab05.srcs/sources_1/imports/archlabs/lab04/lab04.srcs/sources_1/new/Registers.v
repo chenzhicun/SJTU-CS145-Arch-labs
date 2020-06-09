@@ -33,6 +33,8 @@ module Registers(
     );
     
     reg [31:0] regFile[31:0];
+    //declaration must be global
+    reg [5:0] cnt;//we need to set bit width to 6,because if it is only 5(range:0~31), it will overflow when adding to 32
     
     always @ (readReg1 or readReg2 or writeReg)
     begin
@@ -46,7 +48,6 @@ module Registers(
     begin
         if(reset)
         begin
-            reg [5:0] cnt;//we need to set bit width to 6,because if it is only 5(range:0~31), it will overflow when adding to 32
             for(cnt=0;cnt<32;cnt=cnt+1)
                 regFile[cnt]=0;
         end

@@ -30,14 +30,14 @@ module Top_tb(
     Top top(.Clk(Clk),.reset(reset));
 
     initial begin
-        $readmemb("./instruction.txt",top.instMem.memFile);
-        $readmemh("./data.txt",top.dataMem.memFile);
         Clk=0;
         reset=1;
         #100
+        //$readmemb("instruction.txt",top.instMem.memFile);
+        //$readmemh("data.txt",top.dataMem.memFile);
         reset=0;
-        #2000;
-        //reset=1;
-        //#100;
+        #1900;
+        reset=1;
+        #100;
     end
 endmodule
