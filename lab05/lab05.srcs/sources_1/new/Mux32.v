@@ -26,7 +26,7 @@ module Mux32(
     input [31:0] in2,
     output [31:0] out
     );
-
+    // if sel=1->in2, if sel=0->in1
     assign out=sel?in2:in1;
 
 endmodule

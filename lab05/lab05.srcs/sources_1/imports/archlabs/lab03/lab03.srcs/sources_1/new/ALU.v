@@ -24,6 +24,7 @@ module ALU(
     input [31:0] input1,
     input [31:0] input2,
     input [3:0] aluCtrOut,
+    input [4:0] immediate,
     output reg zero,
     output reg [31:0] aluRes    
     );
@@ -76,6 +77,22 @@ module ALU(
                 aluRes=0;
                 zero=1;
             end
+        end
+        4'b1000:
+        begin
+            aluRes=input2<<immediate;
+            if(aluRes==0)
+                zero=1;
+            else
+                zero=0;
+        end
+        4'b1001:
+        begin
+            aluRes=input2>>immediate;
+            if(aluRes==0)
+                zero=1;
+            else
+                zero=0;
         end
         4'b1100:
         begin

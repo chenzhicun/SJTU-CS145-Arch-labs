@@ -56,7 +56,7 @@ module Top(
     signext ext(.inst(INST[15:0]),.data(IMMIDIATE_EXT));
     ALU_Ctr aluCtr(.funct(INST[5:0]),.aluOp(ALU_OP),.aluCtrOut(ALU_CTR_OUT));
     Mux32 aluSrcMux(.sel(ALU_SRC),.in1(REG_READ_DATA_2),.in2(IMMIDIATE_EXT),.out(ALU_SRC_2));
-    ALU alu(.input1(REG_READ_DATA_1),.input2(ALU_SRC_2),.aluCtrOut(ALU_CTR_OUT),.zero(ZERO),.aluRes(ALU_RESULT));
+    ALU alu(.input1(REG_READ_DATA_1),.input2(ALU_SRC_2),.aluCtrOut(ALU_CTR_OUT),.immediate(INST[10:6]),.zero(ZERO),.aluRes(ALU_RESULT));
 
     //data memory
     wire [31:0] MEM_READ_DATA;

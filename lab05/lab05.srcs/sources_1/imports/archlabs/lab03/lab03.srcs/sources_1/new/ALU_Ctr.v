@@ -28,13 +28,15 @@ module ALU_Ctr(
     always @(aluOp or funct)
     begin
         casex({aluOp,funct})
-            8'b00xxxxxx: aluCtrOut=4'b0010;
-            8'b1xxx0000: aluCtrOut=4'b0010;
-            8'b1xxx0010: aluCtrOut=4'b0110;
-            8'b1xxx0100: aluCtrOut=4'b0000;
-            8'b1xxx0101: aluCtrOut=4'b0001;
-            8'b1xxx1010: aluCtrOut=4'b0111;
-            8'bx1xxxxxx: aluCtrOut=4'b0110;
+            8'b00xxxxxx: aluCtrOut=4'b0010;   // sw and lw
+            8'b10100000: aluCtrOut=4'b0010;   // add 
+            8'b10100010: aluCtrOut=4'b0110;   // sub
+            8'b10100100: aluCtrOut=4'b0000;   // and
+            8'b10100101: aluCtrOut=4'b0001;   // or
+            8'b10101010: aluCtrOut=4'b0111;   // slt
+            8'b10000000: aluCtrOut=4'b1000;   // sll
+            8'b10000010: aluCtrOut=4'b1001;   // srl
+            8'bx1xxxxxx: aluCtrOut=4'b0110;   // beq
             default: aluCtrOut=4'b1111;
         endcase
     end

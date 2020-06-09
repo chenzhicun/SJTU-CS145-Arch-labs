@@ -26,7 +26,7 @@ module Mux5(
     input [4:0] in2,
     input [4:0] out
     );
-
+    // if sel=1->in2, if sel=0->in1
     assign out=sel?in2:in1;
 
 endmodule
