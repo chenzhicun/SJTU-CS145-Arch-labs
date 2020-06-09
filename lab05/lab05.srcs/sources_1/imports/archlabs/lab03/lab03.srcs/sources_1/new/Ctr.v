@@ -30,7 +30,8 @@ module Ctr(
     output reg memWrite,
     output reg branch,
     output reg [2:0] aluOp,
-    output reg jump
+    output reg jump,
+    output reg jal
     );
     
     always @(opCode)
@@ -47,6 +48,7 @@ module Ctr(
             branch=0;
             aluOp=3'b010;
             jump=0;
+            jal=0;
         end
         6'b100011://I-type:lw
         begin
@@ -59,6 +61,7 @@ module Ctr(
             branch=0;
             aluOp=3'b000;
             jump=0;
+            jal=0;
         end
         6'b101011://I-type:sw
         begin
@@ -70,7 +73,8 @@ module Ctr(
             memWrite=1;
             branch=0;
             aluOp=3'b000; 
-            jump=0;           
+            jump=0;
+            jal=0;           
         end
         6'b000100://I-type:beq
         begin
@@ -83,6 +87,7 @@ module Ctr(
             branch=1;
             aluOp=3'b001;
             jump=0;
+            jal=0;
         end
         6'b000010://J-type:j
         begin
@@ -95,6 +100,7 @@ module Ctr(
             branch=0;
             aluOp=3'b000;
             jump=1;
+            jal=0;
         end
         6'b001000://I-type:addi
         begin
@@ -107,6 +113,7 @@ module Ctr(
             branch=0;
             aluOp=3'b100;
             jump=0;
+            jal=0;
         end
         6'b001100://I-type:andi
         begin
@@ -119,6 +126,7 @@ module Ctr(
             branch=0;
             aluOp=3'b111;
             jump=0;
+            jal=0;
         end
         6'b001101://I-type:ori
         begin
@@ -131,6 +139,7 @@ module Ctr(
             branch=0;
             aluOp=3'b110;
             jump=0;
+            jal=0;
         end
         6'b000011://J-type:jal
         begin
@@ -143,6 +152,7 @@ module Ctr(
             branch=0;
             aluOp=3'b000;
             jump=1;
+            jal=1;
         end
         
         default:
@@ -156,6 +166,7 @@ module Ctr(
             branch=0;
             aluOp=3'b000;
             jump=0;
+            jal=0;
         end
         endcase    
     end

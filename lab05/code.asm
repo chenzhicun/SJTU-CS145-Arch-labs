@@ -15,8 +15,12 @@ srl $6,$6,4
 beq $2,$3,JUMP
 and $6,$2,$5
 
-JUMP:
+BEQ:
+jal END
 addi $7,2
 andi $1,6
 ori $7,5
 j LOAD
+
+END:
+jr $31
