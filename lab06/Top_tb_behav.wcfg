@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2800000001fs"></ZoomEndTime>
+      <Cursor1Time time="2800000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="211"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/Top_tb/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/regfiles/regFile" type="array">
+      <obj_property name="ElementShortName">regFile[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">regFile[31:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="Reversed">false</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/dataMem/memFile" type="array">
+      <obj_property name="ElementShortName">memFile[0:63][31:0]</obj_property>
+      <obj_property name="ObjectShortName">memFile[0:63][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/instMem/memFile" type="array">
+      <obj_property name="ElementShortName">memFile[0:127][7:0]</obj_property>
+      <obj_property name="ObjectShortName">memFile[0:127][7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/STALL" type="logic">
+      <obj_property name="ElementShortName">STALL</obj_property>
+      <obj_property name="ObjectShortName">STALL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/PC" type="array">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/BRANCH" type="logic">
+      <obj_property name="ElementShortName">BRANCH</obj_property>
+      <obj_property name="ObjectShortName">BRANCH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/FWD_EX_A" type="logic">
+      <obj_property name="ElementShortName">FWD_EX_A</obj_property>
+      <obj_property name="ObjectShortName">FWD_EX_A</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/FWD_EX_B" type="logic">
+      <obj_property name="ElementShortName">FWD_EX_B</obj_property>
+      <obj_property name="ObjectShortName">FWD_EX_B</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/FWD_MEM_A" type="logic">
+      <obj_property name="ElementShortName">FWD_MEM_A</obj_property>
+      <obj_property name="ObjectShortName">FWD_MEM_A</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/FWD_MEM_B" type="logic">
+      <obj_property name="ElementShortName">FWD_MEM_B</obj_property>
+      <obj_property name="ObjectShortName">FWD_MEM_B</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/MEM_READ_DATA" type="array">
+      <obj_property name="ElementShortName">MEM_READ_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_READ_DATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/MEMWB_REG_WRITE" type="logic">
+      <obj_property name="ElementShortName">MEMWB_REG_WRITE</obj_property>
+      <obj_property name="ObjectShortName">MEMWB_REG_WRITE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/MEMWB_MEM_READ_DATA" type="array">
+      <obj_property name="ElementShortName">MEMWB_MEM_READ_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMWB_MEM_READ_DATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/MEMWB_ALURES" type="array">
+      <obj_property name="ElementShortName">MEMWB_ALURES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMWB_ALURES[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/REG_WRITE_DATA" type="array">
+      <obj_property name="ElementShortName">REG_WRITE_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">REG_WRITE_DATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/ALU_SRC_A" type="array">
+      <obj_property name="ElementShortName">ALU_SRC_A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_SRC_A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_tb/top/ALU_SRC_B" type="array">
+      <obj_property name="ElementShortName">ALU_SRC_B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_SRC_B[31:0]</obj_property>
+   </wvobject>
+</wave_config>

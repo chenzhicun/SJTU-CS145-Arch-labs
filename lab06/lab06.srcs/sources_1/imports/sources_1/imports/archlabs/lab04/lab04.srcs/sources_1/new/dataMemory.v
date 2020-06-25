@@ -35,7 +35,7 @@ module dataMemory(
         $readmemh("data.txt",memFile);
     end
 
-    always @ (address)
+    always @ (address or memRead)
     begin
         if (memRead && !memWrite)
             readData=memFile[address];

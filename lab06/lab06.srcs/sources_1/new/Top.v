@@ -54,6 +54,9 @@ module Top(
     reg [1:0] MEMWB_CTRL;
     wire MEMWB_MEM_TO_REG = MEMWB_CTRL[1], MEMWB_REG_WRITE = MEMWB_CTRL[0];
 
+    // Hazard detection Unit
+    wire STALL = IDEX_MEM_READ & (IDEX_RT == IFID_RS | IDEX_RT == IFID_RT);
+
     // define what will be done in each stage
     // IF stage
     reg [31:0] PC;
@@ -108,10 +111,11 @@ module Top(
     end
 
     // forwarding unit
-    wire FWD_EX_A = EXMEM_REG_WRITE & (EXMEM_REG_DST == IDEX_RS);
-    wire FWD_EX_B = EXMEM_REG_WRITE & (EXMEM_REG_DST == IDEX_RT);
-    wire FWD_MEM_A = MEMWB_REG_WRITE & (MEMWB_REG_DST == IDEX_RS);
-    wire FWD_MEM_B = MEMWB_REG_WRITE & (MEMWB_REG_DST == IDEX_RT);
+    // the last condition is for the very first beginning (all register is 0)
+    wire FWD_EX_A = EXMEM_REG_WRITE & (EXMEM_REG_DST == IDEX_RS) & (EXMEM_REG_DST != 0);
+    wire FWD_EX_B = EXMEM_REG_WRITE & (EXMEM_REG_DST == IDEX_RT) & (EXMEM_REG_DST != 0);
+    wire FWD_MEM_A = MEMWB_REG_WRITE & (MEMWB_REG_DST == IDEX_RS) & (MEMWB_REG_DST != 0);
+    wire FWD_MEM_B = MEMWB_REG_WRITE & (MEMWB_REG_DST == IDEX_RT) & (MEMWB_REG_DST != 0);
 
     // EX stage
     // using if statement to replace Mux32
@@ -178,8 +182,5 @@ module Top(
         MEMWB_REG_DST = 0;
         MEMWB_CTRL = 0;
     end
-
-
-
 
 endmodule
