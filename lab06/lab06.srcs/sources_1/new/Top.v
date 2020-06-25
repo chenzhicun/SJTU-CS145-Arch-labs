@@ -60,9 +60,11 @@ module Top(
     // define what will be done in each stage
     // IF stage
     reg [31:0] PC;
-    wire [31:0] PC_PLUS_4, BRANCH_ADDR, NEXT_PC, INST;
+    wire JUMP;
+    wire [31:0] PC_PLUS_4, BRANCH_ADDR, NEXT_PC, INST, JUMP_ADDR, NEXT_PC_TMP;
     assign PC_PLUS_4 = PC + 4;
-    Mux32 branchMux(.sel(BRANCH),.in1(PC_PLUS_4),.in2(BRANCH_ADDR),.out(NEXT_PC));
+    Mux32 branchMux(.sel(BRANCH),.in1(PC_PLUS_4),.in2(BRANCH_ADDR),.out(NEXT_PC_TMP));
+    Mux32 jumpMux(.sel(JUMP),.in1(NEXT_PC_TMP),.in2(JUMP_ADDR),.out(NEXT_PC));
     instMemory instMem(.readAddress(PC),.inst(INST));
 
     //update PC and stage register
@@ -74,7 +76,7 @@ module Top(
             IFID_INST <= INST;
             PC <= NEXT_PC;
         end
-        if (BRANCH)
+        if (BRANCH | JUMP)
         // flush the instruction;
         // we use the strategy that always predicts not taken;
         // so if we should take the branch, flush the original instruction;
@@ -84,7 +86,7 @@ module Top(
     end
 
     //ID stage
-    wire REG_DST, ALU_SRC, MEM_TO_REG, REG_WRITE, MEM_READ, MEM_WRITE, CTR_BRANCH, JUMP, JAL;
+    wire REG_DST, ALU_SRC, MEM_TO_REG, REG_WRITE, MEM_READ, MEM_WRITE, CTR_BRANCH, JAL;
     wire [2:0] ALU_OP;
     Ctr mainCtr(.opCode(IFID_INST[31:26]),.regDst(REG_DST),.aluSrc(ALU_SRC),.memToReg(MEM_TO_REG),.regWrite(REG_WRITE),.memRead(MEM_READ),.memWrite(MEM_WRITE),
         .branch(CTR_BRANCH),.aluOp(ALU_OP),.jump(JUMP),.jal(JAL));
@@ -98,6 +100,7 @@ module Top(
     // solve branch instruction at ID stage
     assign BRANCH_ADDR = (IMMIDIATE_EXT << 2) + IFID_PC_PLUS_4;
     assign BRANCH = (REG_READ_DATA_1 == REG_READ_DATA_2) & CTR_BRANCH;
+    assign JUMP_ADDR = {IFID_PC_PLUS_4[31:28],IFID_INST[25:0] << 2};
 
     always @ (posedge Clk)
     begin
@@ -124,7 +127,9 @@ module Top(
     wire [31:0] ALU_SRC_B_FINAL;
     wire [31:0] MEM_WRITE_DATA = FWD_EX_B ? EXMEM_ALU_RES : FWD_MEM_B ? REG_WRITE_DATA :IDEX_READDATA_2;
     wire [31:0] ALU_RES;
+    wire [31:0] ALU_RES_FINAL;
     wire [4:0] WRITE_REG_DST;
+    wire [4:0] WRITE_REG_DST_TMP;
     wire [3:0] ALU_CTR_OUT;
     wire ZERO;
 
@@ -133,13 +138,15 @@ module Top(
     ALU alu(.input1(ALU_SRC_A),.input2(ALU_SRC_B_FINAL),.aluCtrOut(ALU_CTR_OUT),
         .immediate(IDEX_IMMI_EXT[10:6]),.zero(ZERO),.aluRes(ALU_RES));
 
-    Mux5 regDstMux(.sel(IDEX_REG_DST),.in1(IDEX_RT),.in2(IDEX_RD),.out(WRITE_REG_DST));
+    Mux5 tmpRegDstMux(.sel(IDEX_REG_DST),.in1(IDEX_RT),.in2(IDEX_RD),.out(WRITE_REG_DST_TMP));
+    Mux5 regDstMux(.sel(IDEX_JAL),.in1(WRITE_REG_DST_TMP),.in2(5'b11111),.out(WRITE_REG_DST));
+    Mux32 jalPCMux(.sel(IDEX_JAL),.in1(ALU_RES),.in2(IFID_PC_PLUS_4 - 4),.out(ALU_RES_FINAL));
 
     always @ (posedge Clk)
     begin
         EXMEM_CTRL <= IDEX_CTRL[9:5];
         EXMEM_ZERO <= ZERO;
-        EXMEM_ALU_RES <= ALU_RES;
+        EXMEM_ALU_RES <= ALU_RES_FINAL;
         EXMEM_WRITE_DATA <= MEM_WRITE_DATA;
         EXMEM_REG_DST <= WRITE_REG_DST;
     end

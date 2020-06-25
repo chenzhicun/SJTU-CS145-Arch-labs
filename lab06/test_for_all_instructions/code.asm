@@ -18,11 +18,7 @@ beq $2,$3,JUMP
 and $6,$2,$5
 
 BEQ:
-jal END
 addi $7,2
 andi $1,6
 ori $7,5
-j LOAD
-
-END:
-jr $31
+jal LOAD
