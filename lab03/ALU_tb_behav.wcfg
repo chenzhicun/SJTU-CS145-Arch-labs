@@ -12,19 +12,19 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
-      <Cursor1Time time="277663000fs"></Cursor1Time>
+      <ZoomEndTime time="800000000fs"></ZoomEndTime>
+      <Cursor1Time time="800000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="171"></NameColumnWidth>
+      <NameColumnWidth column_width="150"></NameColumnWidth>
       <ValueColumnWidth column_width="102"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
-   <wvobject fp_name="/ALU_tb/alu/input1" type="array">
+   <wvobject fp_name="/ALU_tb/input1" type="array">
       <obj_property name="ElementShortName">input1[31:0]</obj_property>
       <obj_property name="ObjectShortName">input1[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/alu/input2" type="array">
+   <wvobject fp_name="/ALU_tb/input2" type="array">
       <obj_property name="ElementShortName">input2[31:0]</obj_property>
       <obj_property name="ObjectShortName">input2[31:0]</obj_property>
    </wvobject>
@@ -32,12 +32,12 @@
       <obj_property name="ElementShortName">aluCtrOut[3:0]</obj_property>
       <obj_property name="ObjectShortName">aluCtrOut[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/ALU_tb/alu/zero" type="logic">
-      <obj_property name="ElementShortName">zero</obj_property>
-      <obj_property name="ObjectShortName">zero</obj_property>
-   </wvobject>
    <wvobject fp_name="/ALU_tb/alu/aluRes" type="array">
       <obj_property name="ElementShortName">aluRes[31:0]</obj_property>
       <obj_property name="ObjectShortName">aluRes[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ALU_tb/alu/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
    </wvobject>
 </wave_config>

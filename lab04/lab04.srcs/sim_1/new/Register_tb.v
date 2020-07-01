@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Shanghai Jiao Tong University
+// Engineer: Zhicun Chen
 // 
 // Create Date: 2020/05/29 21:34:37
 // Design Name: 
