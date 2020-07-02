@@ -1,0 +1,373 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jun 30 20:46:35 2020
+# Process ID: 21308
+# Current directory: D:/Project/archlabs/lab01
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3380 D:\Project\archlabs\lab01\lab01.xpr
+# Log file: D:/Project/archlabs/lab01/vivado.log
+# Journal file: D:/Project/archlabs/lab01\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Project/archlabs/lab01/lab01.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source flowing_light_tb.tcl
+close_sim
+launch_simulation
+source flowing_light_tb.tcl
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg
+set_property xsim.view D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg
+source flowing_light_tb.tcl
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg
+source flowing_light_tb.tcl
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg
+source flowing_light_tb.tcl
+close_sim
+close_project
+open_project D:/Project/archlabs/lab02/lab02.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source adder_4bit_tb.tcl
+restart
+restart
+run 500 ns
+save_wave_config {D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg
+set_property xsim.view D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg
+source adder_4bit_tb.tcl
+close_sim
+close_project
+open_project D:/Project/archlabs/lab03/lab03.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Ctr_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab03/ALU_tb_behav.wcfg
+source Ctr_tb.tcl
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/regDst}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/aluSrc}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/memToReg}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/regWrite}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/memRead}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/memWrite}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/branch}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/aluOp}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/jump}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/Ctr_tb/ctr/opCode}} 
+restart
+restart
+run 500 ns
+restart
+run 1000 ns
+restart
+run 500 ns
+restart
+run 700 ns
+restart
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg}
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ALU_Ctr_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab03/ALU_tb_behav.wcfg
+source ALU_Ctr_tb.tcl
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/ALU_Ctr_tb/ctr/funct}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/ALU_Ctr_tb/ctr/aluOp}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/ALU_Ctr_tb/ctr/aluCtrOut}} 
+restart
+restart
+run 800 ns
+run 800 ns
+restart
+restart
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg}
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ALU_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab03/ALU_tb_behav.wcfg
+source ALU_tb.tcl
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/ALU_tb/input1}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/ALU_tb/input2}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/ALU_tb/alu/aluRes}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/ALU_tb/alu/aluCtrOut}} 
+current_wave_config {ALU_tb_behav.wcfg}
+add_wave {{/ALU_tb/alu/zero}} 
+restart
+restart
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg}
+close_sim
+close_project
+open_project D:/Project/archlabs/lab04/lab04.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Register_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab04/Register_tb_behav.wcfg
+source Register_tb.tcl
+restart
+restart
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/readReg1}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/register/readData1}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/register/readReg2}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/register/readData2}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/register/regWrite}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/register/writeData}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/register/writeReg}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/register/regFile}} 
+restart
+restart
+run 800 ns
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/Register_tb/Clk}} 
+restart
+restart
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab04/Register_tb_behav.wcfg}
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top dataMemory_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab04/Register_tb_behav.wcfg
+source dataMemory_tb.tcl
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/dataMemory_tb/Clk}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/dataMemory_tb/address}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/dataMemory_tb/writeData}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/dataMemory_tb/memWrite}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/dataMemory_tb/memRead}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/dataMemory_tb/mem/readData}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/dataMemory_tb/mem/memFile}} 
+restart
+run 800 ns
+restart
+restart
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab04/Register_tb_behav.wcfg}
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top signext_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab04/Register_tb_behav.wcfg
+source signext_tb.tcl
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/signext_tb/ext/inst}} 
+current_wave_config {Register_tb_behav.wcfg}
+add_wave {{/signext_tb/ext/data}} 
+restart
+restart
+run 800 ns
+run 500 ns
+restart
+run 500 ns
+save_wave_config {D:/Project/archlabs/lab04/Register_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab04/Register_tb_behav.wcfg
+source signext_tb.tcl
+close_sim
+close_project
+open_project D:/Project/archlabs/lab05/lab05.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab05/Top_tb_behav.wcfg
+source Top_tb.tcl
+restart
+run 1000 ns
+restart
+restart
+restart
+run 2000 ns
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab05/Top_tb_behav.wcfg
+source Top_tb.tcl
+restart
+run 2000 ns
+close_sim
+close_project
+open_project D:/Project/archlabs/lab06/lab06.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+restart
+restart
+restart
+current_wave_config {Top_tb_behav.wcfg}
+add_wave {{/Top_tb/top/PC}} 
+restart
+restart
+run 2000 ns
+current_wave_config {Top_tb_behav.wcfg}
+add_wave {{/Top_tb/top/JR}} 
+restart
+restart
+run 2000 ns
+restart
+restart
+run 2000 ns
+run 2000 ns
+restart
+restart
+run 2000 ns
+restart
+restart
+run 2000 ns
+restart
+restart
+run 2000 ns
+current_wave_config {Top_tb_behav.wcfg}
+add_wave {{/Top_tb/top/JAL}} 
+restart
+restart
+run 2000 ns
+restart
+restart
+restart
+run 2500 ns
+restart
+restart
+run 2500 ns
+restart
+restart
+run 2500 ns
+restart
+restart
+run 2500 ns
+restart
+restart
+run 2500 ns
+restart
+restart
+run 2800 ns
+restart
+run 2700 ns
+save_wave_config {D:/Project/archlabs/lab06/Top_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+restart
+restart
+run 2700 ns
+restart
+run 3000 ns
+close_sim
+open_project D:/Project/archlabs/lab05/lab05.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/Project/archlabs/lab05/Top_tb_behav.wcfg
+source Top_tb.tcl
+restart
+run 2000 ns
+close_sim
+close_project
+launch_simulation
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+restart
+run 3000 ns
+save_wave_config {D:/Project/archlabs/lab06/Top_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+restart
+restart
+run 3000 ns
+restart
+restart
+run 3000 ns
+save_wave_config {D:/Project/archlabs/lab06/Top_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+restart
+run 3000 ns
+close_sim
+close_project

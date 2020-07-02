@@ -34,7 +34,7 @@ module Top_tb(
         reset = 1;
         #100
         reset = 0;
-        #2500
+        #3000
         reset = 1;
     end
 endmodule

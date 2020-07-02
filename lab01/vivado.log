@@ -1,0 +1,1933 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jun 30 20:46:35 2020
+# Process ID: 21308
+# Current directory: D:/Project/archlabs/lab01
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3380 D:\Project\archlabs\lab01\lab01.xpr
+# Log file: D:/Project/archlabs/lab01/vivado.log
+# Journal file: D:/Project/archlabs/lab01\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Project/archlabs/lab01/lab01.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SomeSoftware/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 703.066 ; gain = 87.730
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'flowing_light_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj flowing_light_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab01/lab01.srcs/sources_1/new/flowing_light.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flowing_light
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab01/lab01.srcs/sim_1/new/flowing_light_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flowing_light_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto f15d483312df43808241cf5b94c7fad0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot flowing_light_tb_behav xil_defaultlib.flowing_light_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.flowing_light
+Compiling module xil_defaultlib.flowing_light_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot flowing_light_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim/xsim.dir/flowing_light_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Jun 30 21:23:24 2020...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 711.031 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "flowing_light_tb_behav -key {Behavioral:sim_1:Functional:flowing_light_tb} -tclbatch {flowing_light_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source flowing_light_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'flowing_light_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 717.059 ; gain = 6.750
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 772.004 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'flowing_light_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj flowing_light_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab01/lab01.srcs/sources_1/new/flowing_light.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flowing_light
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab01/lab01.srcs/sim_1/new/flowing_light_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flowing_light_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto f15d483312df43808241cf5b94c7fad0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot flowing_light_tb_behav xil_defaultlib.flowing_light_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.flowing_light
+Compiling module xil_defaultlib.flowing_light_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot flowing_light_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "flowing_light_tb_behav -key {Behavioral:sim_1:Functional:flowing_light_tb} -tclbatch {flowing_light_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source flowing_light_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'flowing_light_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 772.004 ; gain = 0.000
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg
+set_property xsim.view D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'flowing_light_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj flowing_light_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto f15d483312df43808241cf5b94c7fad0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot flowing_light_tb_behav xil_defaultlib.flowing_light_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "flowing_light_tb_behav -key {Behavioral:sim_1:Functional:flowing_light_tb} -tclbatch {flowing_light_tb.tcl} -view {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg
+source flowing_light_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'flowing_light_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 772.004 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'flowing_light_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj flowing_light_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto f15d483312df43808241cf5b94c7fad0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot flowing_light_tb_behav xil_defaultlib.flowing_light_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "flowing_light_tb_behav -key {Behavioral:sim_1:Functional:flowing_light_tb} -tclbatch {flowing_light_tb.tcl} -view {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg
+source flowing_light_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'flowing_light_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 772.004 ; gain = 0.000
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+save_wave_config {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'flowing_light_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj flowing_light_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto f15d483312df43808241cf5b94c7fad0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot flowing_light_tb_behav xil_defaultlib.flowing_light_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab01/lab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "flowing_light_tb_behav -key {Behavioral:sim_1:Functional:flowing_light_tb} -tclbatch {flowing_light_tb.tcl} -view {D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab01/flowing_light_tb_behav.wcfg
+source flowing_light_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'flowing_light_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 772.004 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project D:/Project/archlabs/lab02/lab02.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SomeSoftware/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'adder_4bit_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj adder_4bit_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab02/lab02.srcs/sources_1/new/adder_1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab02/lab02.srcs/sources_1/new/adder_4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab02/lab02.srcs/sim_1/new/adder_4bit_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_4bit_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2f4d43c7f8ef4b13b8ace983f053b116 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot adder_4bit_tb_behav xil_defaultlib.adder_4bit_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder_1bit
+Compiling module xil_defaultlib.adder_4bit
+Compiling module xil_defaultlib.adder_4bit_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adder_4bit_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim/xsim.dir/adder_4bit_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 10:17:19 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 772.004 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adder_4bit_tb_behav -key {Behavioral:sim_1:Functional:adder_4bit_tb} -tclbatch {adder_4bit_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source adder_4bit_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adder_4bit_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 772.004 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 500 ns
+save_wave_config {D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg
+set_property xsim.view D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 776.082 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'adder_4bit_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj adder_4bit_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab02/lab02.srcs/sources_1/new/adder_1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab02/lab02.srcs/sources_1/new/adder_4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab02/lab02.srcs/sim_1/new/adder_4bit_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_4bit_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2f4d43c7f8ef4b13b8ace983f053b116 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot adder_4bit_tb_behav xil_defaultlib.adder_4bit_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder_1bit
+Compiling module xil_defaultlib.adder_4bit
+Compiling module xil_defaultlib.adder_4bit_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adder_4bit_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab02/lab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adder_4bit_tb_behav -key {Behavioral:sim_1:Functional:adder_4bit_tb} -tclbatch {adder_4bit_tb.tcl} -view {D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab02/adder_4bit_tb_behav.wcfg
+source adder_4bit_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adder_4bit_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 776.082 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project D:/Project/archlabs/lab03/lab03.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SomeSoftware/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+set_property top Ctr_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Ctr_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Ctr_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab03/lab03.srcs/sim_1/new/Ctr_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto e6bd882c490c47b69af3b0c198b82e95 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Ctr_tb_behav xil_defaultlib.Ctr_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.Ctr_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Ctr_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim/xsim.dir/Ctr_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 11:04:13 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 802.500 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Ctr_tb_behav -key {Behavioral:sim_1:Functional:Ctr_tb} -tclbatch {Ctr_tb.tcl} -view {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab03/ALU_tb_behav.wcfg
+WARNING: Simulation object /ALU_tb/alu/input1 was not found in the design.
+WARNING: Simulation object /ALU_tb/alu/input2 was not found in the design.
+WARNING: Simulation object /ALU_tb/alu/aluCtrOut was not found in the design.
+WARNING: Simulation object /ALU_tb/alu/zero was not found in the design.
+WARNING: Simulation object /ALU_tb/alu/aluRes was not found in the design.
+source Ctr_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Ctr_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 802.500 ; gain = 0.000
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/regDst}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/aluSrc}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/memToReg}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/regWrite}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/memRead}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/memWrite}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/branch}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/aluOp}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/jump}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/Ctr_tb/ctr/opCode}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 500 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 500 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 700 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 822.051 ; gain = 0.000
+set_property top ALU_Ctr_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_Ctr_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALU_Ctr_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab03/lab03.srcs/sim_1/new/ALU_Ctr_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto e6bd882c490c47b69af3b0c198b82e95 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_Ctr_tb_behav xil_defaultlib.ALU_Ctr_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.ALU_Ctr_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ALU_Ctr_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim/xsim.dir/ALU_Ctr_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 13:48:05 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 822.051 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALU_Ctr_tb_behav -key {Behavioral:sim_1:Functional:ALU_Ctr_tb} -tclbatch {ALU_Ctr_tb.tcl} -view {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab03/ALU_tb_behav.wcfg
+WARNING: Simulation object /Ctr_tb/ctr/opCode was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/regDst was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/aluSrc was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/memToReg was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/regWrite was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/memRead was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/memWrite was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/branch was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/aluOp was not found in the design.
+WARNING: Simulation object /Ctr_tb/ctr/jump was not found in the design.
+source ALU_Ctr_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALU_Ctr_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 822.051 ; gain = 0.000
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/ALU_Ctr_tb/ctr/funct}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/ALU_Ctr_tb/ctr/aluOp}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/ALU_Ctr_tb/ctr/aluCtrOut}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+run 800 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 822.051 ; gain = 0.000
+set_property top ALU_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab03/lab03.srcs/sim_1/new/ALU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto e6bd882c490c47b69af3b0c198b82e95 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_tb_behav xil_defaultlib.ALU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.ALU_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ALU_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim/xsim.dir/ALU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 14:31:34 2020...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 822.051 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab03/lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALU_tb_behav -key {Behavioral:sim_1:Functional:ALU_tb} -tclbatch {ALU_tb.tcl} -view {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab03/ALU_tb_behav.wcfg
+WARNING: Simulation object /ALU_Ctr_tb/ctr/funct was not found in the design.
+WARNING: Simulation object /ALU_Ctr_tb/ctr/aluOp was not found in the design.
+WARNING: Simulation object /ALU_Ctr_tb/ctr/aluCtrOut was not found in the design.
+source ALU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 822.051 ; gain = 0.000
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/ALU_tb/input1}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/ALU_tb/input2}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/ALU_tb/alu/aluRes}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/ALU_tb/alu/aluCtrOut}} 
+current_wave_config {ALU_tb_behav.wcfg}
+ALU_tb_behav.wcfg
+add_wave {{/ALU_tb/alu/zero}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab03/ALU_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 823.676 ; gain = 1.625
+close_project
+open_project D:/Project/archlabs/lab04/lab04.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SomeSoftware/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+set_property top Register_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Register_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Register_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab04/lab04.srcs/sim_1/new/Register_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2695deffd0e8403993515e143b039def --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Register_tb_behav xil_defaultlib.Register_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.Register_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Register_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim/xsim.dir/Register_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 15:40:22 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 865.496 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Register_tb_behav -key {Behavioral:sim_1:Functional:Register_tb} -tclbatch {Register_tb.tcl} -view {D:/Project/archlabs/lab04/Register_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab04/Register_tb_behav.wcfg
+WARNING: Simulation object /signext_tb/ext/inst was not found in the design.
+WARNING: Simulation object /signext_tb/ext/data was not found in the design.
+source Register_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Register_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 865.496 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/readReg1}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/register/readData1}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/register/readReg2}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/register/readData2}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/register/regWrite}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/register/writeData}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/register/writeReg}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/register/regFile}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/Register_tb/Clk}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab04/Register_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 886.883 ; gain = 0.000
+set_property top dataMemory_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'dataMemory_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj dataMemory_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab04/lab04.srcs/sim_1/new/dataMemory_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2695deffd0e8403993515e143b039def --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot dataMemory_tb_behav xil_defaultlib.dataMemory_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.dataMemory_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dataMemory_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim/xsim.dir/dataMemory_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 16:07:38 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 886.883 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dataMemory_tb_behav -key {Behavioral:sim_1:Functional:dataMemory_tb} -tclbatch {dataMemory_tb.tcl} -view {D:/Project/archlabs/lab04/Register_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab04/Register_tb_behav.wcfg
+WARNING: Simulation object /Register_tb/Clk was not found in the design.
+WARNING: Simulation object /Register_tb/readReg1 was not found in the design.
+WARNING: Simulation object /Register_tb/register/readData1 was not found in the design.
+WARNING: Simulation object /Register_tb/register/readReg2 was not found in the design.
+WARNING: Simulation object /Register_tb/register/readData2 was not found in the design.
+WARNING: Simulation object /Register_tb/register/regWrite was not found in the design.
+WARNING: Simulation object /Register_tb/register/writeReg was not found in the design.
+WARNING: Simulation object /Register_tb/register/writeData was not found in the design.
+WARNING: Simulation object /Register_tb/register/regFile was not found in the design.
+source dataMemory_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dataMemory_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 886.883 ; gain = 0.000
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/dataMemory_tb/Clk}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/dataMemory_tb/address}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/dataMemory_tb/writeData}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/dataMemory_tb/memWrite}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/dataMemory_tb/memRead}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/dataMemory_tb/mem/readData}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/dataMemory_tb/mem/memFile}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+save_wave_config {D:/Project/archlabs/lab04/Register_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top signext_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'signext_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj signext_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab04/lab04.srcs/sim_1/new/signext_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2695deffd0e8403993515e143b039def --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot signext_tb_behav xil_defaultlib.signext_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.signext_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot signext_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim/xsim.dir/signext_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 17:07:21 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 886.883 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "signext_tb_behav -key {Behavioral:sim_1:Functional:signext_tb} -tclbatch {signext_tb.tcl} -view {D:/Project/archlabs/lab04/Register_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab04/Register_tb_behav.wcfg
+WARNING: Simulation object /dataMemory_tb/Clk was not found in the design.
+WARNING: Simulation object /dataMemory_tb/address was not found in the design.
+WARNING: Simulation object /dataMemory_tb/writeData was not found in the design.
+WARNING: Simulation object /dataMemory_tb/memWrite was not found in the design.
+WARNING: Simulation object /dataMemory_tb/memRead was not found in the design.
+WARNING: Simulation object /dataMemory_tb/mem/readData was not found in the design.
+WARNING: Simulation object /dataMemory_tb/mem/memFile was not found in the design.
+source signext_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'signext_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 886.883 ; gain = 0.000
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/signext_tb/ext/inst}} 
+current_wave_config {Register_tb_behav.wcfg}
+Register_tb_behav.wcfg
+add_wave {{/signext_tb/ext/data}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 800 ns
+run 500 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 500 ns
+save_wave_config {D:/Project/archlabs/lab04/Register_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 886.883 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'signext_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj signext_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab04/lab04.srcs/sim_1/new/signext_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2695deffd0e8403993515e143b039def --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot signext_tb_behav xil_defaultlib.signext_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.signext_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot signext_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab04/lab04.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "signext_tb_behav -key {Behavioral:sim_1:Functional:signext_tb} -tclbatch {signext_tb.tcl} -view {D:/Project/archlabs/lab04/Register_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab04/Register_tb_behav.wcfg
+source signext_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'signext_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 886.883 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project D:/Project/archlabs/lab05/lab05.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SomeSoftware/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Mux32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Mux5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/instMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 7e5c5445755e4f39b808d9a1bfc9de2d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'aluOp' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:55]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'aluOp' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:69]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'in2' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:62]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.instMemory
+Compiling module xil_defaultlib.Mux5
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.Mux32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim/xsim.dir/Top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 20:25:32 2020...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -view {D:/Project/archlabs/lab05/Top_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab05/Top_tb_behav.wcfg
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 886.883 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 924.770 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Mux32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Mux5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/instMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 7e5c5445755e4f39b808d9a1bfc9de2d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'aluOp' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:55]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'aluOp' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:69]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'in2' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:62]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.instMemory
+Compiling module xil_defaultlib.Mux5
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.Mux32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -view {D:/Project/archlabs/lab05/Top_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab05/Top_tb_behav.wcfg
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 924.770 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project D:/Project/archlabs/lab06/lab06.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SomeSoftware/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/instMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 3a418f8e3c8e45949ec93e661feef77f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux32
+Compiling module xil_defaultlib.instMemory
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Mux5
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim/xsim.dir/Top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  1 23:53:26 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 924.770 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -view {D:/Project/archlabs/lab06/Top_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 924.770 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Top_tb_behav.wcfg}
+Top_tb_behav.wcfg
+add_wave {{/Top_tb/top/PC}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+current_wave_config {Top_tb_behav.wcfg}
+Top_tb_behav.wcfg
+add_wave {{/Top_tb/top/JR}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+run 2000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+current_wave_config {Top_tb_behav.wcfg}
+Top_tb_behav.wcfg
+add_wave {{/Top_tb/top/JAL}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2500 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2500 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2500 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2500 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2500 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2800 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2700 ns
+save_wave_config {D:/Project/archlabs/lab06/Top_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 924.770 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/instMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 3a418f8e3c8e45949ec93e661feef77f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux32
+Compiling module xil_defaultlib.instMemory
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Mux5
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -view {D:/Project/archlabs/lab06/Top_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 924.770 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2700 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 3000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+open_project D:/Project/archlabs/lab05/lab05.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SomeSoftware/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Mux32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Mux5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/instMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab05/lab05.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 7e5c5445755e4f39b808d9a1bfc9de2d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'aluOp' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:55]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'aluOp' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:69]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'in2' [D:/Project/archlabs/lab05/lab05.srcs/sources_1/new/Top.v:62]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.instMemory
+Compiling module xil_defaultlib.Mux5
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.Mux32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab05/lab05.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -view {D:/Project/archlabs/lab05/Top_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab05/Top_tb_behav.wcfg
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 924.945 ; gain = 0.176
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/instMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 3a418f8e3c8e45949ec93e661feef77f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux32
+Compiling module xil_defaultlib.instMemory
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Mux5
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -view {D:/Project/archlabs/lab06/Top_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 930.590 ; gain = 5.582
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 3000 ns
+save_wave_config {D:/Project/archlabs/lab06/Top_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/instMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 3a418f8e3c8e45949ec93e661feef77f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux32
+Compiling module xil_defaultlib.instMemory
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Mux5
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -view {D:/Project/archlabs/lab06/Top_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 930.590 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 3000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 3000 ns
+save_wave_config {D:/Project/archlabs/lab06/Top_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/ALU_Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab03/lab03.srcs/sources_1/new/Ctr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/Mux5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux5
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/new/instMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sources_1/imports/sources_1/imports/archlabs/lab04/lab04.srcs/sources_1/new/signext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signext
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/archlabs/lab06/lab06.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SomeSoftware/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 3a418f8e3c8e45949ec93e661feef77f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux32
+Compiling module xil_defaultlib.instMemory
+Compiling module xil_defaultlib.Ctr
+Compiling module xil_defaultlib.ALU_Ctr
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.signext
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Mux5
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/archlabs/lab06/lab06.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -view {D:/Project/archlabs/lab06/Top_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config D:/Project/archlabs/lab06/Top_tb_behav.wcfg
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 930.590 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 3000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul  2 13:18:49 2020...

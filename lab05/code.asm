@@ -12,7 +12,7 @@ and $6,$2,$5
 sll $6,$6,6
 sw $4,12($0)
 srl $6,$6,1
-beq $2,$3,JUMP
+beq $2,$3,BEQ
 and $6,$2,$5
 
 BEQ:
